@@ -1,7 +1,0 @@
-{
-  "message": "Hello there",
-  "from": "/hello",
-  "protocol": "http",
-  "method": "GET",
-  "Date": "Date.now()"
-}

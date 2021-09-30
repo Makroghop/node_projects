@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{head.description}" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <base href="{global.baseUrl}" />
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/app.css" />
+
+    <title>{head.title}</title>
+  </head>
+  <body class="{body.class}">
+    <header class="header">
+      <div class="btn-menu" id="menu__toggle"><span>menu</span></div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/" class="nav__link link-1">Home</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/orders/list" class="nav__link link-2">Dashboard</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/menu/all" class="nav__link link-3">menu</a>
+          </li>
+
+          <li class="nav__item loggedOut">
+            <a href="/account/create" class="nav__link link-4">Sign Up</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/account/edit" class="nav__link link-5">Account</a>
+          </li>
+
+          <li class="nav__item loggedOut">
+            <a href="/session/create" class="nav__link link-6">Sign In</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/cart/view" class="nav__link link-7">cart</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/cart/checkout" class="nav__link link-8">checkout</a>
+          </li>
+
+          <li class="nav__item loggedIn">
+            <a href="/session/delete" class="nav__link link-9">Sign Out</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="__root__"></div>
+  </body>
+  <footer><p>{global.companyName} {global.@c}</p></footer>
+</html>

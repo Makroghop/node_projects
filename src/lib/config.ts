@@ -23,6 +23,7 @@ class Environment {
   staging() {
     return {
       "Mode": "Staging",
+      "hashingSecrete": "aHashingSecrete",
       "httpPort": {
         "port": 3000,
       },
@@ -31,12 +32,19 @@ class Environment {
         "port": 3001,
         "options": retCert(),
       },
+      "templateGlobals": {
+        "appTitle": "Pizza App",
+        "@c": new Date().getFullYear(),
+        "companyName": "Pizza .INC",
+        "baseUrl": "http://localhost:3000",
+      },
     };
   }
 
   production() {
     return {
       "Mode": "Production",
+      "hashingSecrete": "aHashingSecrete",
       "httpPort": {
         "port": 5000,
       },
@@ -44,6 +52,12 @@ class Environment {
       "httpsPort": {
         "port": 5001,
         "options": this.retCert(),
+      },
+      "templateGlobals": {
+        "appTitle": "Pizza App",
+        "@c": new Date().getFullYear(),
+        "companyName": "Pizza .INC",
+        "baseUrl": "http://localhost:3000",
       },
     };
   }
@@ -57,11 +71,6 @@ class Environment {
 }
 
 const environments = new Environment();
-
-// // const getK$ =
-// //   <T extends keyof object, U extends keyof T>(obj: T) =>
-// //   (key: U) =>
-// //     obj[key];
 
 const tof = process.env.NODE_ENV as keyof typeof environments;
 

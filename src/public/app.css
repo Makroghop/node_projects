@@ -1,0 +1,256 @@
+/* 
+OOOOO--GLOBALS--OOOOO
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  box-sizing: border-box;
+}
+:root {
+  --header__bg: #e7aa8e;
+  --header__height: 3rem;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+header,
+footer,
+img,
+a,
+a:hover,
+a:active,
+a:visited,
+table,
+tr,
+td,
+th,
+form,
+input,
+button,
+select,
+textarea {
+  line-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-width: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+button {
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+/* ---------------------- */
+
+/* 
+OOOOO--HEADER--OOOOO
+*/
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header__height);
+  padding: 16px;
+  background-color: var(--header__bg);
+  z-index: 11;
+  box-shadow: -7px -2px 9px 1px #cc7777;
+}
+
+/* 
+OOOOO--HEADER-NAV-(<nav>)--OOOOO
+*/
+.header .nav {
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+/* ---------------------- */
+
+/* 
+OOOOO--HEADER-LIST-(<ul>)--OOOOO
+*/
+.header .nav .nav__list {
+  position: absolute;
+  background: rgb(40, 43, 46);
+  list-style: none;
+  width: 100%;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  top: 0;
+  border-radius: 14px;
+  justify-content: center;
+  height: 400px;
+  overflow: auto;
+  transform: translateY(160%);
+  transition: all 0.6s cubic-bezier(0.38, 0.29, 0.28, -0.01);
+}
+/* ---------------------- */
+
+/* 
+OOOOO--HEADER-LIST-(<li>)--OOOOO
+*/
+.header .nav .nav__list .nav__item {
+  width: 100%;
+}
+/* ---------------------- */
+
+/* 
+OOOOO--HEADER-LIST-(<a>)--OOOOO
+*/
+.header .nav .nav__list .nav__item .nav__link {
+  display: block;
+  font-size: 16px;
+  color: white;
+  line-height: 4;
+  font-size: 16px;
+}
+/* ---------------------- */
+
+/* 
+OOOOO--NAVIGATION-BUTTON--OOOOO
+*/
+.header .btn-menu {
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+.header .btn-menu span {
+  /* font-size: 17px; */
+  background-color: #cc7777;
+  border-radius: 9px;
+  text-transform: uppercase;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  padding: 12px 23px;
+}
+/* ---------------------- */
+
+/* ------------------------------------ */
+
+/* 
+OOOOO--ROOT-COMPONENT--OOOOO
+*/
+.__root__ {
+  margin-top: calc(var(--header__height));
+}
+/* ---------------------- */
+
+.main__component {
+  position: relative;
+  background-color: #2c2d29;
+  width: 100%;
+  height: 70vh;
+}
+
+.main__component .main__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.main__component .main__content .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main__component .main__content .image::before {
+  content: "";
+  background: rgba(3, 3, 3, 0.322);
+  position: inherit;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main__component .main__content .text {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  z-index: 1;
+}
+.main__component .main__content .text .l1 h1 {
+  font-size: 2.9em;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #ffedcc;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main__component .main__content .text .l2 h2 {
+  font-size: 1.6em;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #ede8df;
+  text-transform: capitalize;
+}
+.main__component .main__content .text .btn__ctx {
+  margin-top: 1.4rem;
+}
+.main__component .main__content .text .btn__ctx .main-bt {
+  padding: 0.7em 0.9em;
+  font-size: 19px;
+  text-transform: capitalize;
+  color: #f2f2e5;
+  background-color: #152828;
+  border-radius: 8px;
+}
+/* 
+OOOOOOOOOOOOOOOOOOOOO
+OOOOO--FOOTER--OOOOO
+OOOOOOOOOOOOOOOOOOOO
+
+*/
+footer {
+  min-height: 7.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cc7777;
+}
+p {
+  font-size: 1.3em;
+  color: rgb(240, 240, 240);
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ----------------------------------------------- */
+/* 
+OOOOO--MEDIA--OOOOO
+*/
+@media screen and (min-width: 680px) {
+  c {
+    display: none;
+  }
+}
+
+/* ---------------------- */
